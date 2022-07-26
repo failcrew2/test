@@ -1,4 +1,5 @@
 ﻿// Задача 1 
+
 //  Console.WriteLine("Введите первое число");
 //    int numA = Convert.ToInt32(Console.ReadLine());
 //  Console.WriteLine("Введите второе число"); 
@@ -13,6 +14,7 @@
 
 
 // Задача 2
+
 // Console.WriteLine("Введите первое число");
 //   int numA = Convert.ToInt32(Console.ReadLine());
 // Console.WriteLine("Введите второе число");
@@ -35,9 +37,20 @@
 
 
 // Задача 3
+
 // Console.WriteLine("Введите число : ");
 // int numA = Convert.ToInt32(Console.Read());
 // if (numA % 2 == 0) Console.WriteLine("Четное");
 // else Console.WriteLine("Нечетное");
+
+
+//задача 4
+
+    int number = 20;
+    for (int i = 1; i <= number; i++)
+    {
+        if (i % 2 == 0) Console.WriteLine(i);
+
+    }
 
 
