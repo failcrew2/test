@@ -1,80 +1,125 @@
-﻿// Задача 19: Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+﻿            ////Задача 2: Напишите программу, которая на вход принимает два числа и выдаёт, какое число большее, а какое меньшее.
 
-/*
-Console.WriteLine("Введите число: ");
-string number = Console.ReadLine();
+// Console.WriteLine("Введите первое число->");
+// int NumberA = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите Второе число->");
+// int NumberB = Convert.ToInt32(Console.ReadLine());
 
-    void CheckingNumber(string number)
-    {
-        if (number[0]==number[4] || number[1]==number[3])
-        {
-            Console.WriteLine($"Ваше число: {number} - палиндром.");
-        }
-    else Console.WriteLine($"Ваше число: {number} - НЕ палиндром.");
-    }
-        if (number!.Length == 5)
-    {
-        CheckingNumber(number);
-    }
-         else Console.WriteLine($"Введи правильное число");
-         
-*/
-
-//Задача 23: Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
-
-/*
-
-Console.Write("Введите число: ");
-int cube = Convert.ToInt32(Console.ReadLine());
-
-void Cube(int[] cube){
-  int counter = 0;
-  int length = cube.Length;
-  while (counter <  length){
-    cube[counter] = Convert.ToInt32(Math.Pow(counter, 3));
-    counter++;
-  }
-}
-
-void PrintArry(int[] coll){
-  int count = coll.Length;
-  int index = 0;
-  while(index < count){
-    Console.Write(coll[index]+ " ");
-    index++;
-  }
-} 
-
-int[] arry = new int[cube+1];
-Cube(arry);
-PrintArry(arry);
-
-*/
-
-//Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+//    if ( NumberA > NumberB)
+//        {
+//         Console.WriteLine(NumberA + "Максимальное число");
+//         Console.WriteLine(NumberB + "Минимальное число");
+//        }
+//     else 
+//     {
+//         Console.WriteLine(NumberB + "Максимальное число");
+//         Console.WriteLine(NumberA + "Минимальное число");
+//     }
 
 
-int a1 = Cord("x", "A");
-int b1 = Cord("y", "A");
-int c1 = Cord("z", "A");
-int a2 = Cord("x", "B");
-int b2 = Cord("y", "B");
-int c2 = Cord("z", "B");
 
-int Cord(string coorName, string pointName)
-{
-    Console.Write($"Введите координату {coorName} точки {pointName}: ");
-    return Convert.ToInt16(Console.ReadLine());
-}
+            ////Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
 
-double Decision(double a1, double a2, 
-                double b1, double b2, 
-                double c1, double c2){
-  return Math.Sqrt(Math.Pow((a2-a1), 2) + 
-                   Math.Pow((b2-b1), 2) + 
-                   Math.Pow((c2-c1), 2));
-}
+// Console.Write("Введите первое число ->");
+// int NumberA = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите второе число ->");
+// int NumberB = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите третье число ->");
+// int NumberC = Convert.ToInt32(Console.ReadLine());
+// int max;
 
-double segmentLength =  Math.Round (Decision(a1, a2, b1, b2, c1, c2), 2 );
+//     if (NumberA > NumberB)
+//         {
+//         max = NumberA;
+//         Console.WriteLine (max + " Максимальное число ");
+//         }
+//     else if (NumberB > NumberC)
+//         {
+//             max = NumberB;
+//             Console.WriteLine (max + " Максимальное число ");
+//         }
+//     else if (NumberC > NumberA)
+//         {
+//             max = NumberC;
+//             Console.WriteLine (max + " Максимальное число ");
+//         }
+//     else if (NumberA > NumberC)
+//         {
+//             max = NumberA;
+//             Console.WriteLine (max + " Максимальное число ");
+//         }
+//     else 
+//         {
+//             Console.WriteLine(" Некорретный ввод ");
+//         }
 
-Console.WriteLine($"Длина отрезка  {segmentLength}");
+
+           ////Задача 6:Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка)
+
+// Console.Write("Введите число для проверки на четность->");
+// int NumberA = Convert.ToInt32(Console.ReadLine());
+
+//     if (NumberA % 2 == 0)
+//         {
+//              Console.WriteLine(NumberA + " Число четное ");
+//         }
+//     else
+//         {
+//             Console.WriteLine(NumberA + " Число не четное ");
+//         }
+
+
+
+            ////Задача 8:Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+
+
+// Console.Write(" Введите число ");
+// int NumberA = Convert.ToInt32(Console.ReadLine());
+
+//     for (int start = 0; start <= NumberA; start++)
+//             {
+//                 if ( NumberA % 2 == 0 )
+//                 Console.Write(start + " ");
+//              }
+
+
+// //Задача 5: Напишите программу, которая на вход принимает одно число (N), а на выходе показывает все целые числа в промежутке от -N до N
+
+
+// Console.Write(" Введите число ");
+// int NumberA = Convert.ToInt32(Console.ReadLine());
+// int start = -NumberA;
+
+//         while (start <= NumberA)
+//             {
+//                 Console.Write(start);
+//                 start++;
+//              }
+      
+// Задача 7: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает последнюю цифру этого числа.
+
+
+// Console.Write(" Введите трехзначное число ");
+// int NumberA = Convert.ToInt32(Console.ReadLine());
+// int NumberB = 0;
+
+//   if (NumberB <= NumberA)
+//     {
+//             NumberB = NumberA % 10;
+//             Console.WriteLine(NumberB + " Последняя цифра числа ");
+//     }
+//   else
+//     {
+//         Console.WriteLine("Вы ввели не трехзначное число"); 
+//     }
+
+  
+  
+
+
+
+
+
+
+
+
