@@ -1,48 +1,120 @@
-﻿// Задача номер 15
+﻿// // Задайте массив заполненный случайными положительными трёхзначными числами. 
+// // Напишите программу, которая покажет количество чётных чисел в массиве.
+// // [345, 897, 568, 234] -> 2
 
-//     Console.WriteLine("Какой сегодня по счету  день недели?");
-//     int weekday = Convert.ToInt32(Console.ReadLine());
 
-//     if (weekday <= 7)
+// Console.WriteLine("Введите размер массива");
+// int size = Convert.ToInt32(Console.ReadLine());
+// int[] numbers = new int[size];
+// FillArrayRandomNumbers(numbers);
+// Console.WriteLine("Вот наш массив: ");
+// PrintArray(numbers);
+// int count = 0;
+
+//   for (int i = 0; i < numbers.Length; i++)
+//       if (numbers[i] % 2 == 0)
+//       count++;
+
+// Console.WriteLine($"всего {numbers.Length} чисел, {count} из них чётные");
+
+// void FillArrayRandomNumbers(int[] numbers)
 //     {
-//     if (weekday == 1)
-//         Console.WriteLine("Сегодня будний день. Понедельник");
-//         else  if(weekday == 2)
-//         Console.WriteLine("Сегодня будний день. Вторник");
-//         else  if(weekday == 3)
-//         Console.WriteLine("Сегодня будний день. Среда");
-//         else  if(weekday == 4)
-//         Console.WriteLine("Сегодня будний день. Четверг");
-//         else  if(weekday == 5)
-//         Console.WriteLine("Сегодня будний день. Пятница");
-//         else  if(weekday == 6)
-//         Console.WriteLine("Сегодня выходной день. Суббота");
-//         else  if(weekday == 7)
-//         Console.WriteLine("Сегодня выходной день. Воскресение");
+//         for(int i = 0; i < numbers.Length; i++)
+//         {
+//             numbers[i] = new Random().Next(100,1000);
 //         }
-//    else
-//    {
-//     Console.WriteLine("Дней в неделе всего 7");
-//    }
+//     }
+// void PrintArray(int[] numbers)
+//         {
+//             Console.Write("[ ");
+//             for(int i = 0; i < numbers.Length; i++)
+//             {
+//                 Console.Write(numbers[i] + " ");
+//             }
+//             Console.Write("]");
+//             Console.WriteLine();
+//         }
+
+
+// // Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+// // [3, 7, 23, 12] -> 19
+
+// // [-4, -6, 89, 6] -> 0
+
+// Console.WriteLine("Введите размер массива");
+// int size = Convert.ToInt32(Console.ReadLine());
+// int[] numbers = new int[size];
+// FillArrayRandomNumbers(numbers);
+// Console.WriteLine("Вот наш массив: ");
+// PrintArray(numbers);
+// int sum = 0;
+
+// for (int z = 0; z < numbers.Length; z+=2)
+//     sum = sum + numbers[z];
+
+//     Console.WriteLine($"всего {numbers.Length} чисел(а), сумма элементов на нечётных позициях = {sum}");
+
+// void FillArrayRandomNumbers(int[] numbers)
+// {
+//     for(int i = 0; i < numbers.Length; i++)
+//         {
+//             numbers[i] = new Random().Next(1,10);
+//         }
+// }
+// void PrintArray(int[] numbers)
+// {
+//     Console.Write("[ ");
+//     for(int i = 0; i < numbers.Length; i++)
+//         {
+//             Console.Write(numbers[i] + " ");
+//         }
+//     Console.Write("]");
+//     Console.WriteLine();
+// }
 
 
 
-
-// Задача 10
-
-// Console.Write("Введите трёхзначное число: ");
-// int threeDigitNumber = Convert.ToInt32(Console.ReadLine());
-// string stringNumber = Convert.ToString(threeDigitNumber);
-// Console.WriteLine("вторая цифра этого числа "+stringNumber[1]);
+//Задача 38: Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
 
-Задача 13 
-Console.Write("Введите число: ");
-int Number = Convert.ToInt32(Console.ReadLine());
-string NumberText = Convert.ToString(Number);
-if (NumberText.Length > 2){
-  Console.WriteLine("Третья цифра " + NumberText[2]);
+Console.WriteLine("Введите размер массива");
+int size = Convert.ToInt32(Console.ReadLine());
+double[] numbers = new double[size];
+FillArrayRandomNumbers(numbers);
+Console.WriteLine("Вот наш массив: ");
+PrintArray(numbers);
+double min = Int32.MaxValue;
+double max = Int32.MinValue;
+
+for (int z = 0; z < numbers.Length; z++)
+{
+    if (numbers[z] > max)
+        {
+            max = numbers[z];
+        }
+    if (numbers[z] < min)
+        {
+            min = numbers[z];
+        }
 }
-else {
-  Console.WriteLine("Третьей цифры нет");
+Console.WriteLine($"всего {numbers.Length} чисел. Максимальное значение = {max}, минимальное значение = {min}");
+Console.WriteLine($"Разница между максимальным и минимальным значением = {max - min}");
+
+void FillArrayRandomNumbers(double[] numbers)
+{
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i] = Convert.ToDouble(new Random().Next(100,1000)) / 100;
+        }
 }
+void PrintArray(double[] numbers)
+{
+    Console.Write("[ ");
+    for(int i = 0; i < numbers.Length; i++)
+        {
+            Console.Write(numbers[i] + " ");
+        }
+    Console.Write("]");
+    Console.WriteLine();
+}
+
