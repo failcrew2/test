@@ -70,39 +70,39 @@
 //Найдите среднее арифметическое элементов в каждом столбце.
 
 
-Console.WriteLine("Введите количество столбцов");
-int m = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите количество строк");
-int n = Convert.ToInt32(Console.ReadLine());
-double[] summ = new double[n];
-double[,] array = new double[m, n];
+// Console.WriteLine("Введите количество столбцов");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите количество строк");
+// int n = Convert.ToInt32(Console.ReadLine());
+// double[] summ = new double[n];
+// double[,] array = new double[m, n];
 
-for (int i = 0; i < array.GetLength(0); i++)
-{
-    for (int j = 0; j < array.GetLength(1); j++)
-    {
-        array[i, j] = i + j;
-        array[i, j] = new Random().Next(10,100);
-        System.Console.Write(array[i, j] + " | ");
-    }
-    System.Console.WriteLine();
-}
-System.Console.WriteLine();
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+//     for (int j = 0; j < array.GetLength(1); j++)
+//     {
+//         array[i, j] = i + j;
+//         array[i, j] = new Random().Next(10,100);
+//         System.Console.Write(array[i, j] + " | ");
+//     }
+//     System.Console.WriteLine();
+// }
+// System.Console.WriteLine();
 
-RowArray(array);
+// RowArray(array);
 
-foreach (double elem in summ)
-{
-    Console.WriteLine($" Среднее арифметическое " + elem/n);
-}
+// foreach (double elem in summ)
+// {
+//     Console.WriteLine($" Среднее арифметическое " + elem/n);
+// }
 
-void RowArray(double[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-             summ[i] += array[j, i];   
-        }
-    }
-}
+// void RowArray(double[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//              summ[i] += array[j, i];   
+//         }
+//     }
+// }
